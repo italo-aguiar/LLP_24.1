@@ -1,10 +1,12 @@
 #include <stdio.h> 
 int main() { 
-  int i;  
-  for (i = 0; i <= 50; i++) { 
-    if (i % 2 == 0) { 
-      printf("%d\n", i); 
-    } 
+  int numero;  
+  for (numero = 0; numero <= 50; numero++) { 
+    if (numero % 2 == 0) { 
+      printf("%d\n", numero); 
+    } else {
+    printf("\n");
+    }
   }  
 return 0; 
 } 
