@@ -1,4 +1,30 @@
-//Impressão de números pares
+/*
+CABEÇALHO:
+
+Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)
+Campus Fortaleza
+Curso Superior de Tecnologia em Telemática
+Disciplina de Lógica e Linguaguem de Programação
+
+Atividade nº: 2 
+Tema: "Impressão de números pares utilizando loop"
+
+Linguagem de programação: C
+
+Autoria: Italo Wesley Oliveira de Aguiar
+
+Data da solicitação: 03/04/2024
+Data da conclusão: 03/04/2024 
+(Obs: A data da conclusão não vincula-se, necessariamente, à data de envio.)
+*/
+
+
+/* 
+PROPOSTA:
+
+Elaborar um código para imprimir números pares utilizando comandos de loop
+
+*/
 
 #include <stdio.h> 
 int main() { 
