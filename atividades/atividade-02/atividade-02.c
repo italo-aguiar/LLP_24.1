@@ -7,7 +7,7 @@ Curso Superior de Tecnologia em Telemática
 Disciplina de Lógica e Linguaguem de Programação
 
 Atividade nº: 2 
-Tema: "Impressão de números pares utilizando loop"
+Tema: "Impressão de números pares"
 
 Linguagem de programação: C
 
