@@ -26,6 +26,9 @@ Elaborar um código para imprimir números pares utilizando comandos de loop
 
 */
 
+
+/* RESPOSTA: */
+
 #include <stdio.h> 
 int main() { 
   int numero;  
