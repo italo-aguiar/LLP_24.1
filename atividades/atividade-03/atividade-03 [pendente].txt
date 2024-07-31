@@ -2,15 +2,26 @@ Responda as perguntas abaixo:
 A **manipulação de bits** desempenha um papel crucial na programação moderna, oferecendo controle detalhado sobre os dados em nível binário. Vamos explorar por que a manipulação de bits é importante e como ela é aplicada:
 
 1. O que é Manipulação de Bits?
-
- O bit é a menor unidade de informação que pode ser armazenada ou transmitida, pondendo assumir somente 2 valores: 0 ou 1. A manipulação de bits é uma técnica que permite alterar os bits individuais de dados binários por meio de operações lógicas e matemáticas. Por exemplo: 
-
+R= O bit é a menor unidade de informação que pode ser armazenada ou transmitida, pondendo assumir somente 2 valores: 0 ou 1. A manipulação de bits é uma técnica 
+que permite alterar os bits individuais de dados binários por meio de operações lógicas e matemáticas. Por exemplo: Assumindo que a variável "X" inicialmente
+tenha o valor binário "0b00000001" (corresponente a 1 em decimal), uma operação em C "x = (x<<2);" faria com que o valor se tornasse o número binário "0b000000100" 
+(correspondente a 4 em decimal).
 
 2. Qual a Importância da Manipulação de Bits?
+R= A manipulação de bits permite que os programadores realizem operações complexas de forma rápida e eficiente, melhorando o desempenho do código e reduzindo o uso
+de recursos. Exemplos de aplicações envolvem a criptografia, a compressão de dados e o processamento de imagens.
+
 
 3. Quais são as Operações Básicas de Manipulação de Bits?
+R= Em linguagem C, as operações básicas são "e" (&), "ou" (|), "ou exclusivo" (^), "complemento" (~), "deslocamento a esquerda" (<<) e "deslocamento a direita" (>>).
+
 
 4. Exemplo em Linguagem C. Crie um programa  que exibe os bits de um número e realiza operações básicas:
+R=
+
+
+
+===
 
 A manipulação de bits é uma técnica poderosa que permite aos programadores otimizar código, criar algoritmos eficientes e lidar com dados de forma granular¹²³. 🌟
 
