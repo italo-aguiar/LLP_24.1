@@ -19,7 +19,36 @@ R= Em linguagem C, as operações básicas são "e" (&), "ou" (|), "ou exclusivo
 4. Exemplo em Linguagem C. Crie um programa  que exibe os bits de um número e realiza operações básicas:
 R=
 
+#:::::::::::::::::::::::::::::::::::::::::::::::::
+include <stdio.h>
+int main(){
 
+# Conversor de números decimais para binários
+    int n = 33; // Substitua 33 pelo valor decimal que você deseja converter
+    printf("Decimal: %d\n", n);
+    printf("Binário: ");
+    for(int i=7; i>=0; i--)
+        printf("%d", (n>>i)&1);
+
+# Conversor de números binários para decimais
+  
+
+# Operador E
+
+# Operador OU
+
+# Operador NOT
+
+# Operador XOR
+
+# Operadores de deslocamento
+
+
+
+return 0;
+}
+
+#::::::::::::::::::::::::::::::::::::::::::::::::
 
 ===
 
