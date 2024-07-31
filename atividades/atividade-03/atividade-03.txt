@@ -1,3 +1,22 @@
+/*
+CABEÇALHO:
+
+Instituto Federal de Educação, Ciência e Tecnologia do Ceará (IFCE)
+Campus Fortaleza
+Curso Superior de Tecnologia em Telemática
+Disciplina de Lógica e Linguaguem de Programação
+
+Atividade nº: 3 
+Tema: "Respostas de multipla escolha sobre linguagem C"
+
+Linguagem de programação: C
+
+Autoria: Italo Wesley Oliveira de Aguiar
+
+Data da solicitação: 31/07/2024
+Data da conclusão: 31/07/2024 
+(Obs: A data da conclusão não vincula-se, necessariamente, à data de envio.)
+*/
 
 
 1. Qual dos seguintes tipos de variáveis em C pode armazenar números inteiros?
