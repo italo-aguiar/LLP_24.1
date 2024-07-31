@@ -32,7 +32,6 @@ int main(){
 
 # Conversor de números binários para decimais
   
-
 # Operador E
 
 # Operador OU
@@ -42,7 +41,6 @@ int main(){
 # Operador XOR
 
 # Operadores de deslocamento
-
 
 
 return 0;
