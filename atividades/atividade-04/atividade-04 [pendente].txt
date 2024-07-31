@@ -2,7 +2,10 @@ Responda as perguntas abaixo:
 A **manipulação de bits** desempenha um papel crucial na programação moderna, oferecendo controle detalhado sobre os dados em nível binário. Vamos explorar por que a manipulação de bits é importante e como ela é aplicada:
 
 1. O que é Manipulação de Bits?
- 
+
+ O bit é a menor unidade de informação que pode ser armazenada ou transmitida, pondendo assumir somente 2 valores: 0 ou 1. A manipulação de bits é uma técnica que permite alterar os bits individuais de dados binários por meio de operações lógicas e matemáticas. Por exemplo: 
+
+
 2. Qual a Importância da Manipulação de Bits?
 
 3. Quais são as Operações Básicas de Manipulação de Bits?
