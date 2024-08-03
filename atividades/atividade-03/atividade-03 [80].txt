@@ -20,30 +20,70 @@ R= Em linguagem C, as operações básicas são "e" (&), "ou" (|), "ou exclusivo
 R=
 
 #:::::::::::::::::::::::::::::::::::::::::::::::::
-include <stdio.h>
-int main(){
 
-# Conversor de números decimais para binários
-    int n = 33; // Substitua 33 pelo valor decimal que você deseja converter
-    printf("Decimal: %d\n", n);
-    printf("Binário: ");
-    for(int i=7; i>=0; i--)
-        printf("%d", (n>>i)&1);
+#include <stdio.h>
 
-# Conversor de números binários para decimais
-  
-# Operador E
+// Função para exibir os bits de um número inteiro
+void exibirBits(unsigned int num) {
+    int i;
+    unsigned int mascara = 1 << 31; // Máscara para isolar cada bit
 
-# Operador OU
+    printf("%u em binário: ", num);
 
-# Operador NOT
+    // Itera sobre cada bit e exibe 0 ou 1
+    for (i = 0; i < 32; i++) {
+        putchar(num & mascara ? '1' : '0');
+        num <<= 1; // Deslocamento para a esquerda
+    }
 
-# Operador XOR
+    printf("\n");
+}
 
-# Operadores de deslocamento
+int main() {
 
+    int a;
+    printf("Digite um número decimal A: ");
+    scanf("%d", &a);
 
-return 0;
+    int b;
+    printf("Digite um número decimal B: ");
+    scanf("%d", &b);
+    printf("\n");
+
+    // Exibir os bits dos números
+    printf("\n");
+    printf("Número a:\n");
+    exibirBits(a);
+
+    printf("\nNúmero b:\n");
+    exibirBits(b);
+
+    // Operação AND bit a bit
+    unsigned int resultadoAnd = a & b;
+    printf("\nResultado AND:\n");
+    exibirBits(resultadoAnd);
+
+    // Operação OR bit a bit
+    unsigned int resultadoOr = a | b;
+    printf("\nResultado OR:\n");
+    exibirBits(resultadoOr);
+
+    // Operação XOR bit a bit
+    unsigned int resultadoXor = a ^ b;
+    printf("\nResultado XOR:\n");
+    exibirBits(resultadoXor);
+
+    // Deslocamento de bits para a esquerda
+    unsigned int deslocamentoEsquerda = a << 2;
+    printf("\nDeslocamento à esquerda (a):\n");
+    exibirBits(deslocamentoEsquerda);
+
+    // Deslocamento de bits para a direita
+    unsigned int deslocamentoDireita = a >> 2;
+    printf("\nDeslocamento à direita (a):\n");
+    exibirBits(deslocamentoDireita);
+
+    return 0;
 }
 
 #::::::::::::::::::::::::::::::::::::::::::::::::
