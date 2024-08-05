@@ -4,17 +4,157 @@ Atividades de programação em **linguagem C** que envolvem o uso de declaraçõ
 - Descrição: Escreva um programa que leia um número inteiro e verifique se ele é positivo, negativo ou zero. Use a declaração `if`.
 - Dica: Use a função `scanf` para ler o número e compare-o com zero.
 
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    // Leia o número inteiro
+    printf("Digite um número inteiro: ");
+    scanf("%d", &numero);
+
+    // Verifique o sinal do número
+    if (numero > 0) {
+        printf("O número é positivo.\n");
+    } else if (numero < 0) {
+        printf("O número é negativo.\n");
+    } else {
+        printf("O número é zero.\n");
+    }
+
+    return 0;
+}
+
+
+####################################################################################
+
+
 2. Atividade com `if else`:
 - Descrição: Crie um programa que determine se um ano é bissexto ou não. 
  Um ano é bissexto se for divisível por 4, exceto quando é divisível por 100 (a menos que também seja divisível por 400).
 - Dica: Use a declaração `if else` para verificar as condições.
 
+#include <stdio.h>
+
+int main() {
+    int ano;
+
+    // Leia o ano
+    printf("Digite um ano: ");
+    scanf("%d", &ano);
+
+    // Verifique se o ano é bissexto
+    if (ano % 4 == 0) {
+        if (ano % 100 == 0) {
+            if (ano % 400 == 0) {
+                printf("O ano %d é bissexto.\n", ano);
+            } else {
+                printf("O ano %d não é bissexto.\n", ano);
+            }
+        } else {
+            printf("O ano %d é bissexto.\n", ano);
+        }
+    } else {
+        printf("O ano %d não é bissexto.\n", ano);
+    }
+
+    return 0;
+}
+
+
+####################################################################################
+
+
 3. Atividade com `switch`:
 - Descrição: Implemente um programa que leia um número de 1 a 7 e exiba o dia da semana correspondente (1 = domingo, 2 = segunda-feira, etc.).
 - Dica: Use a estrutura `switch` para associar os números aos dias da semana.
+
+#include <stdio.h>
+#include <time.h>
+
+int main() {
+    struct tm data;
+
+    // Inserir a data
+    printf("Digite o dia (1-31): ");
+    scanf("%d", &data.tm_mday);
+    printf("Digite o mês (1-12): ");
+    scanf("%d", &data.tm_mon);
+    printf("Digite o ano: ");
+    scanf("%d", &data.tm_year);
+
+    // Ajustar o mês e o ano
+    data.tm_mon -= 1; // Mês começa em 0
+    data.tm_year -= 1900; // Ano começa em 1900
+
+    // Calcular o dia da semana
+    mktime(&data);
+
+    // Imprimir o dia da semana
+    printf("Dia da semana: ");
+    switch (data.tm_wday) {
+        case 0:
+            printf("Domingo\n");
+            break;
+        case 1:
+            printf("Segunda-feira\n");
+            break;
+        case 2:
+            printf("Terça-feira\n");
+            break;
+        case 3:
+            printf("Quarta-feira\n");
+            break;
+        case 4:
+            printf("Quinta-feira\n");
+            break;
+        case 5:
+            printf("Sexta-feira\n");
+            break;
+        case 6:
+            printf("Sábado\n");
+            break;
+    }
+
+    return 0;
+}
+
+
+####################################################################################
 
 4. Atividade com Operador Ternário:
 - Descrição: Escreva um programa que leia dois números inteiros e exiba o maior deles usando o operador ternário.
 - Dica: Use a expressão `(a > b) ? a : b` para encontrar o maior número.
 
+#include <stdio.h>
+
+int main() {
+    int a, b;
+
+    // Ler dois números inteiros
+    printf("Digite o primeiro número: ");
+    if (scanf("%d", &a)!= 1) {
+        printf("Erro: não é um número inteiro.\n");
+        return 1;
+    }
+    printf("Digite o segundo número: ");
+    if (scanf("%d", &b)!= 1) {
+        printf("Erro: não é um número inteiro.\n");
+        return 1;
+    }
+
+    // Encontrar o maior número usando o operador ternário
+    int maior = (a > b)? a : b;
+
+    // Exibir o maior número
+    printf("O maior número é: %d\n", maior);
+
+    return 0;
+}
+
+
+####################################################################################
+
 Lembre-se de testar seus programas com diferentes entradas para garantir que funcionem corretamente! 🌟
+
+
