@@ -1,0 +1,134 @@
+Exercícios de programação em linguagem C que abordam variáveis, tipos de dados e operadores:
+
+1. Calculadora Simples
+- Crie um programa que leia dois números inteiros do usuário e exiba a soma, subtração, multiplicação e divisão desses números.
+
+#include <stdio.h>
+
+int main() {
+    int num1, num2; // variáveis para armazenar os números inteiros
+
+    // Ler os números inteiros do usuário
+    printf("Digite o primeiro número inteiro: ");
+    scanf("%d", &num1);
+    printf("Digite o segundo número inteiro: ");
+    scanf("%d", &num2);
+
+    // Calcular e exibir as operações
+    printf("Soma: %d + %d = %d\n", num1, num2, num1 + num2);
+    printf("Subtração: %d - %d = %d\n", num1, num2, num1 - num2);
+    printf("Multiplicação: %d * %d = %d\n", num1, num2, num1 * num2);
+
+    // Verificar se o segundo número é diferente de zero antes de fazer a divisão
+    if (num2!= 0) {
+        printf("Divisão: %d / %d = %d\n", num1, num2, num1 / num2);
+    } else {
+        printf("Erro: não é possível dividir por zero!\n");
+    }
+
+    return 0;
+}
+
+#########################
+
+2. Conversão de Temperatura
+- Escreva um programa que converta uma temperatura em graus Celsius para Fahrenheit. O usuário deve inserir a temperatura em Celsius.
+
+#include <stdio.h>
+
+int main() {
+    float celsius, fahrenheit; // variáveis para armazenar as temperaturas
+
+    // Ler a temperatura em Celsius do usuário
+    printf("Digite a temperatura em Celsius: ");
+    scanf("%f", &celsius);
+
+    // Converter Celsius para Fahrenheit
+    fahrenheit = (celsius * 9.0 / 5.0) + 32.0;
+
+    // Exibir o resultado
+    printf("%.2f°C é igual a %.2f°F\n", celsius, fahrenheit);
+
+    return 0;
+}
+
+#########################
+
+3. Exercício: Verificação de Número Par
+- Peça ao usuário para digitar um número inteiro. Verifique se o número é par ou ímpar e exiba a mensagem correspondente.
+
+#include <stdio.h>
+
+int main() {
+    int num; // variável para armazenar o número inteiro
+
+    // Ler o número inteiro do usuário
+    printf("Digite um número inteiro: ");
+    scanf("%d", &num);
+
+    // Verificar se o número é par ou ímpar
+    if (num % 2 == 0) {
+        printf("%d é um número par.\n", num);
+    } else {
+        printf("%d é um número ímpar.\n", num);
+    }
+
+    return 0;
+}
+
+#########################
+
+4. Cálculo de Média Ponderada
+- Leia três notas (pesos 2, 3 e 5) e calcule a média ponderada. Exiba a média resultante.
+
+#include <stdio.h>
+
+int main() {
+    float nota1, nota2, nota3, media; // variáveis para armazenar as notas e a média
+
+    // Ler as notas do usuário
+    printf("Digite a nota 1 (peso 2): ");
+    scanf("%f", &nota1);
+    printf("Digite a nota 2 (peso 3): ");
+    scanf("%f", &nota2);
+    printf("Digite a nota 3 (peso 5): ");
+    scanf("%f", &nota3);
+
+    // Calcular a média ponderada
+    media = (nota1 * 2 + nota2 * 3 + nota3 * 5) / (2 + 3 + 5);
+
+    // Exibir a média resultante
+    printf("A média ponderada é: %.2f\n", media);
+
+    return 0;
+}
+
+#########################
+
+5. Troca de Valores
+- Leia dois números inteiros e troque seus valores sem usar uma variável temporária.
+
+#include <stdio.h>
+
+int main() {
+    int a, b; // variáveis para armazenar os dois números inteiros
+
+    // Ler os dois números inteiros do usuário
+    printf("Digite o primeiro número inteiro (a): ");
+    scanf("%d", &a);
+    printf("Digite o segundo número inteiro (b): ");
+    scanf("%d", &b);
+
+    // Trocar os valores sem usar uma variável temporária
+    a = a + b;
+    b = a - b;
+    a = a - b;
+
+    // Exibir os valores trocados
+    printf("Valor de a (trocado): %d\n", a);
+    printf("Valor de b (trocado): %d\n", b);
+
+    return 0;
+}
+
+Lembre-se de testar seus programas e explorar diferentes cenários para garantir que funcionem corretamente! 🌟
