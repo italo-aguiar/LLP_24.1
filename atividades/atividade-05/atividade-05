@@ -4,12 +4,104 @@ Atividades de programação em linguagem C que envolvem o uso de loops e os coma
 - Descrição: Escreva um programa que exiba os números pares de 1 a 10 usando um loop `while`.
 - Dica: Use o operador de módulo (`%`) para verificar se um número é par.
 
+#include <stdio.h>
+
+int main() {
+    int i = 1;
+
+    while (i <= 10) {
+        if (i % 2 == 0) {
+            printf("%d ", i);
+        }
+        i++;
+    }
+    printf("\n");
+
+    return 0;
+}
+
+
+################################################
+
 2. Atividade com `do while`:
 - Descrição: Crie um programa que solicite ao usuário que adivinhe um número entre 1 e 100. O programa deve continuar pedindo até que o usuário acerte o número ou digite `-1` para sair.
 - Dica: Use um loop `do while` para repetir a solicitação.
 
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+int main() {
+    int numero_secreto, chute;
+
+    // Gerar um número secreto entre 1 e 100
+    srand(time(NULL));
+    numero_secreto = rand() % 100 + 1;
+
+    do {
+        printf("Adivinhe o número entre 1 e 100 (-1 para sair): ");
+        scanf("%d", &chute);
+
+        if (chute == -1) {
+            printf("Você desistiu!\n");
+            break;
+        }
+
+        if (chute < 1 || chute > 100) {
+            printf("Número inválido. Tente novamente.\n");
+            continue;
+        }
+
+        if (chute < numero_secreto) {
+            printf("O número secreto é maior que %d. Tente novamente.\n", chute);
+        } else if (chute > numero_secreto) {
+            printf("O número secreto é menor que %d. Tente novamente.\n", chute);
+        } else {
+            printf("Parabéns! Você acertou o número secreto: %d\n", numero_secreto);
+            break;
+        }
+    } while (1);
+
+    return 0;
+}
+
+################################################
+
 3. Atividade com `for`:
 - Descrição: Escreva um programa que calcule a soma dos primeiros 10 números inteiros positivos usando um loop `for`.
 - Dica: Use uma variável acumuladora para calcular a soma.
+
+#include <stdio.h>
+
+int main() {
+    int soma = 0; // variável acumuladora
+    int contador = 0; // contador de números lidos
+    int numero; // número lido do usuário
+
+    printf("Digite uma lista de inteiros (pressione Ctrl+D para terminar):\n");
+
+    while (scanf("%d", &numero) == 1) {
+        if (contador < 10) {
+            if (numero > 0) {
+                soma += numero; // soma = soma + numero
+                contador++;
+            } else {
+                printf("Número inválido. Por favor, digite um número inteiro positivo.\n");
+            }
+        } else {
+            break; // sair do loop se já foram lidos 10 números
+        }
+    }
+
+    if (contador < 10) {
+        printf("Você não digitou 10 números inteiros positivos.\n");
+    } else {
+        printf("A soma dos primeiros 10 números inteiros positivos é: %d\n", soma);
+    }
+
+    return 0;
+}
+
+################################################
 
 Lembre-se de testar seus programas e explorar diferentes cenários para garantir que funcionem corretam
