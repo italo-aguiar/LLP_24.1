@@ -1,0 +1,59 @@
+Alguns exemplos de **pseudocódigo** para resolver problemas simples do dia a dia:
+
+1. Fazer Café:
+- Descrição: Escreva um pseudocódigo para fazer uma xícara de café.
+- Pseudocódigo:
+
+Algoritmo FazerCafe
+// Instruções para fazer café
+Escreva "1. Ferva água."
+Escreva "2. Adicione pó de café à cafeteira."
+Escreva "3. Despeje a água quente sobre o pó."
+Escreva "4. Espere alguns minutos."
+Escreva "5. Coe o café e sirva."
+Fim Algoritmo
+
+###############################
+
+2. Fritar um Ovo:
+- Descrição: Escreva um pseudocódigo para fritar um ovo.
+- Pseudocódigo:
+
+1. Assegure-se de ter disponível uma frigideira, um ovo, manteiga/óleo vegetal e sal;
+2. Esquente a frigideira por 30 segundos em fogo médio;
+3. Coloque manteiga/óleo e deixe esquentar por 10 segundos;
+4. Quebre o ovo e despeje seu conteúdo na frigideira;
+5. Deixe o ovo tomar consistência, vire-o uma vez e retire antes de apresentar manchas de queimado.
+
+###############################
+
+3.  Atravessar uma Rua:
+- Descrição: Escreva um pseudocódigo para atravessar uma rua com segurança.
+- Pseudocódigo:
+
+1. Aproxime-se da calçada;
+2. Olhe para o lado direito, verifique se algum veículo se aproxima e guarde a informação;
+3. Olhe para o lado esquerdo, verifique se algum veículo se aproxima e guarde a informação;
+4. Caso algum veículo esteja se aproximando, estime o tempo até ele chegar em sua posição e guarde a informação;
+5. Se o passo 2 E o passo 3 tiver resposta "NÃO", atravesse;
+6. Se o passo 2 ou o passo 3 tiver resposta "SIM", estime o dobro do tempo médio para atravessar a rua;
+7. Caso o tempo estimado no passo 6 seja menor que a informação armazenada no passo 4, atravesse;
+8. Caso o tempo estimado no passo 6 seja maior que a informação armazenada no passo 4, espere o veículo passar e retome o passo 2.   
+
+###############################
+
+4. Fazer uma Vitamina de Banana:
+- Descrição: Escreva um pseudocódigo para preparar uma vitamina de banana.
+- Pseudocódigo:
+
+1. Assegure-se de ter uma banana prata, (leite em pó E água E uma colher de sopa) OU leite em caixa, um liquidificador e um copo com capacidade de 300ml;
+2. Reflita se é desejável utilizar leite em pó ou leite líquido e armazene a informação;
+3. Se for utilizar leite em pó, preencha o copo com 280ml de água. Se for utilizar leite líquido, preencha com 280ml de leite líquido;
+4. Se tiver enchido o copo com água, adicione duas colheres de sopa de leite em pó no liquidificador;
+5. Despeje o conteúdo do copo no liquidificador;
+6. Descasque a banana, a coloque no liquidificador e tampe-o;
+7. Ligue o liquidificador em velocidade média e mantenha ligado até o líquido ficar uniforme;
+8. Despeje o conteúdo do liquidificador no copo com capacidade de 300ml.
+
+
+Lembre-se de que esses são apenas pseudocódigos para representar as etapas dos processos. Para implementar essas ações em uma linguagem de programação real, você precisaria adaptá-las e usar a sintaxe correta da linguagem escolhida. 🌟
