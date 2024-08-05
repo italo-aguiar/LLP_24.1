@@ -1,0 +1,72 @@
+Atividades de programação em linguagem C  que envolvem o uso de arrays (vetores) unidimensionais e multidimensionais, além de laços `for`, os comandos `break` e `continue`:
+
+1. Atividade com Array Unidimensional:
+- Descrição: Escreva um programa que leia 5 números inteiros do usuário e armazene-os em um array. Em seguida, exiba a soma desses números.
+- Dica: Use um loop `for` para ler os números e outro loop para calcular a soma.
+
+#include <stdio.h>
+
+int main() {
+    int numeros[5]; // array para armazenar os 5 números inteiros
+    int soma = 0; // variável para calcular a soma
+
+    // Loop para ler os 5 números inteiros do usuário
+    for (int i = 0; i < 5; i++) {
+        printf("Digite o %dº número: ", i + 1);
+        scanf("%d", &numeros[i]);
+    }
+
+    // Loop para calcular a soma dos números
+    for (int i = 0; i < 5; i++) {
+        soma += numeros[i];
+    }
+
+    printf("A soma dos 5 números é: %d\n", soma);
+
+    return 0;
+}
+
+################################################
+
+
+2. Atividade com Array Multidimensional (Matriz):
+- Descrição: Crie um programa que leia uma matriz 3x3 (ou seja, uma matriz com 3 linhas e 3 colunas) e exiba a soma dos elementos da diagonal principal.
+- Dica: Use um loop `for` aninhado para ler os elementos da matriz e calcule a soma dos elementos da diagonal principal.
+
+#include <stdio.h>
+
+int main() {
+    int matriz[3][3]; // matriz 3x3
+    int soma_diagonal = 0; // variável para calcular a soma da diagonal principal
+
+    // Loop aninhado para ler os elementos da matriz
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("Digite o elemento [%d][%d]: ", i, j);
+            scanf("%d", &matriz[i][j]);
+        }
+    }
+
+    // Mostrar a matriz
+    printf("Matriz:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d ", matriz[i][j]);
+        }
+        printf("\n");
+    }
+
+    // Loop aninhado para calcular a soma da diagonal principal
+    for (int i = 0; i < 3; i++) {
+        soma_diagonal += matriz[i][i];
+    }
+
+    printf("A soma da diagonal principal é: %d\n", soma_diagonal);
+
+    return 0;
+}
+
+################################################
+
+
+Lembre-se de testar seus programas e explorar diferentes cenários para garantir que funcionem corretamente! 🌟
