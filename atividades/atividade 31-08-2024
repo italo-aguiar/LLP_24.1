@@ -1,0 +1,307 @@
+1. O que está errado na seguinte definição de função? Como você corrigiria?
+void calcular_media(int a, int b) {
+    float media = (a + b) / 2;
+    return media;
+
+
+RESPOSTA: 
+
+float calcular_media(int a, int b) {
+  float media = (float)(a + b) / 2; 
+  printf("A média é: %f\n", media);
+  return 0;
+}
+
+int main() {
+  calcular_media(5,8);
+}
+
+
+
+
+============================================================
+
+
+
+2. Qual a diferença entre parâmetros e argumentos em uma função C? Dê um exemplo.
+
+
+RESPOSTA:
+
+Parâmetros: São as variáveis listadas na declaração ou definição de uma função. Agem como "espaços reservados" que recebem valores quando a função é chamada. Em outras palavras, parâmetros são variáveis locais na função que recebem valores passados para a função.
+Argumentos: São os valores reais fornecidos para uma função quando ela é chamada. Argumentos são passados para os parâmetros da função durante a chamada.
+Na questão anterior, os parâmetros são os números inteiros "A" e "B", os quais receberam os argumentos exemplificativos "5" e "8".
+
+
+
+============================================================
+
+
+3. Considere a seguinte função:
+
+void trocar(int x, int y) {
+    int temp = x;
+    x = y;
+    y = temp;
+}
+
+Por que essa função não troca efetivamente os valores das variáveis originais? Como você modificaria para que funcione corretamente?
+
+
+RESPOSTA:
+
+
+Ela troca os valores, no entanto eles não estão sendo impressos. Sugestão:
+
+
+void trocar(int x, int y) {
+    int temp = x;
+    x = y;
+    y = temp;
+    printf("%d %d", x, y);
+}
+
+int main () {  
+ trocar(10, 20);
+}
+
+
+
+============================================================
+
+
+4. Explique a diferença entre passagem por valor e passagem por referência em C. Dê um exemplo de cada.
+
+
+RESPOSTA:
+
+Na passagem por valor, uma cópia do valor do argumento é passada para a função. Isso significa que a função trabalha com uma cópia do valor original, e nenhuma modificação feita na função afeta o valor original.
+
+Na passagem por referência, o endereço (ou ponteiro) do argumento é passado para a função. Isso permite que a função modifique o valor original, pois ela tem acesso ao local de memória onde o valor é armazenado.
+
+
+Exemplo:
+
+#include <stdio.h>
+
+// Função que usa passagem por valor
+void dobrarValor_val(int x) {
+    x = x * 2; // Modifica a cópia local
+    printf("Dentro da função por valor: %d\n", x);
+}
+
+// Função que usa passagem por referência
+void dobrarValor_ref(int *x) {
+    *x = *x * 2; // Modifica o valor na memória
+    printf("\nDentro da função por referência: %d\n", *x);
+}
+
+
+int main() {
+    int num = 5;
+    dobrarValor_val(num); // Passa uma cópia de 'num'
+    printf("Fora da função por valor: %d\n", num); // 'num' não é alterado
+
+
+    dobrarValor_ref(&num); // Passa o endereço de 'num'
+    printf("Fora da função por referência: %d\n", num); // 'num' é alterado
+    return 0;
+}
+
+
+
+============================================================
+
+
+
+5. Como você passaria um array como argumento para uma função em C? Forneça um exemplo de declaração de função que aceite um array de inteiros.
+
+
+RESPOSTA: Com a denominação seguida de colchetes fechados. Abaixo, os elementos do array seriam inseridos quando chamada a função. A estrutura varia dependendo da função, mas abaixo segue um exemplo:
+
+
+#include <stdio.h>
+
+float calcular_media(float array[]) {
+  int n = 0;
+  while (*(array + n) != 0) {
+    n++;
+  }
+  float soma = 0;
+  for (int i = 0; i < n; i++) {
+    soma += array[i];
+  }
+  float media = soma / n;
+  printf("A média é: %.2f\n", media);
+  return media;
+}
+
+int main() {
+  float array[] = {5, 7, 9, 0}; // é necessário inserir sempre o elemento 0 no final. foi a forma encontrada para contar automaticamente os elementos do array.
+  calcular_media(array);
+  return 0;
+}
+
+
+
+============================================================
+
+
+6. O que há de errado com o seguinte código? Como você o corrigiria?
+
+int somar_array(int arr[]) {
+    int soma = 0;
+    for (int i = 0; i < sizeof(arr) / sizeof(arr[0]); i++) {
+        soma += arr[i];
+    }
+    return soma;
+}
+
+
+
+RESPOSTA: 
+O problema com o código é que sizeof(arr) não retorna o número de elementos no array, mas sim o tamanho da variável arr em bytes. Quando um array é passado como parâmetro para uma função, ele é tratado como um ponteiro, e sizeof(arr) retorna o tamanho do ponteiro, não do array original. Para corrigir isso, você precisa passar o tamanho do array como parâmetro separado para a função somar_array.
+
+
+
+#include <stdio.h>
+
+int somar_array(int arr[], int tamanho) {
+    int soma = 0;
+    for (int i = 0; i < tamanho; i++) {
+        soma += arr[i];
+    }
+    return soma;
+}
+
+int main() {
+    int meu_array[] = {1, 2, 3, 4, 5};
+    int soma = somar_array(meu_array, sizeof(meu_array) / sizeof(meu_array[0]));
+    printf("A soma do array é: %d\n", soma);
+    return 0;
+}
+
+
+============================================================
+
+
+7. Escreva uma função em C que receba um array de inteiros e seu tamanho, e retorne o maior elemento do array.
+
+
+RESPOSTA:
+
+#include <stdio.h>
+
+int maior_elemento(int arr[], int tamanho) {
+    int maior = arr[0];
+    for (int i = 1; i < tamanho; i++) {
+        if (arr[i] > maior) {
+            maior = arr[i];
+        }
+    }
+    return maior;
+}
+
+int main() {
+    int meu_array[] = {4, 2, 9, 6, 5, 1, 8, 3, 7};
+    int tamanho = sizeof(meu_array) / sizeof(meu_array[0]);
+    int maior = maior_elemento(meu_array, tamanho);
+    printf("O maior elemento do array é: %d\n", maior);
+    return 0;
+}
+
+
+============================================================
+
+
+8. Qual é a saída do seguinte código? Explique o que está acontecendo.
+
+#include <stdio.h>
+
+int incrementar() {
+    static int count = 0;
+    count++;
+    return count;
+}
+
+int main() {
+    printf("%d ", incrementar());
+    printf("%d ", incrementar());
+    printf("%d", incrementar());
+    return 0;
+}
+
+
+RESPOSTA:
+
+A saída é: 1 2 3
+
+A função incrementar() declara uma variável estática count inicializada com 0. A palavra-chave static significa que a variável é mantida entre as chamadas da função, ou seja, seu valor não é redefinido para 0 a cada vez que a função é chamada.
+
+Quando a função incrementar() é chamada pela primeira vez, count é incrementado para 1 e esse valor é retornado. Na segunda chamada, count é incrementado novamente, agora para 2, e esse valor é retornado. Na terceira chamada, count é incrementado mais uma vez, agora para 3, e esse valor é retornado.
+
+A variável count é mantida entre as chamadas da função porque é estática, então seu valor é preservado entre as chamadas. Se a variável não fosse estática, seu valor seria redefinido para 0 a cada chamada da função e a saída seria 1 1 1.
+
+
+
+============================================================
+
+
+9. Como você usaria o retorno de uma função como argumento para outra função? Dê um exemplo.
+
+
+RESPOSTA:
+
+
+Chamaria a primeira função e passando seu retorno como argumento para a segunda função. Exemplo:
+
+
+#include <stdio.h>
+
+int quadrado(int x) {
+    return x * x;
+}
+
+int soma(int x, int y) {
+    return x + y;
+}
+
+int main() {
+    int resultado = soma(24, quadrado(3));
+    printf("O resultado é: %d\n", resultado);
+    return 0;
+}
+
+
+============================================================
+
+
+10. Crie uma função em C que calcule o fatorial de um número usando recursão. Em seguida, mostre como você chamaria essa função e usaria seu retorno em um programa principal.
+
+
+RESPOSTA: 
+
+#include <stdio.h>
+
+int fatorial(int n) {
+    if (n == 0) {
+        return 1; // base case: 0! = 1
+    } else {
+        int resultado = n * fatorial(n - 1); // recursive case: n! = n * (n-1)!
+        printf("Iteração %d: %d * fatorial(%d) = %d\n", n, n, n - 1, resultado);
+        return resultado;
+    }
+}
+
+int main() {
+    int num = 5;
+    int resultado = fatorial(num);
+    printf("O fatorial de %d é: %d\n", num, resultado);
+    return 0;
+}
+	
+============================================================
+
+
+
+
